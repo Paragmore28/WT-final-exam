@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let current = new Date();
+        
+        let christmas = current.getFullYear();
+        
+        if (current.getMonth() == 11 && current.getDate() > 25) 
+        {
+           
+            christmas = christmas + 1;
+        }
+        
+        let christmasDate = new Date(christmas, 11, 25);
+       
+        let dayMilliseconds = 1000 * 60 * 60 * 24;
+        
+        let remainingDays = Math.ceil((christmasDate.getTime() - current.getTime()) / (dayMilliseconds));
+        document.write("<strong>Program to calculate the total number of days left for Christmas 2022</strong>");
+        document.write("<br><br>");
+        document.write("The Remaining  days untill Christmas are" + remainingDays );
+    </script>
+    <title>Q2-3</title>
+</head>
+<body>
+    
+</body>
+</html>

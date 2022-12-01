@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2-1</title>
+    <style type="text/css">    
+        body{    
+            font-family: Calibri;    
+        }    
+        input[type="text"] {    
+            width: 250px;    
+        }    
+        input[type="submit"], input[type="reset"] {    
+            width: 77px;    
+            height: 27px;    
+            position: relative;left: 180px;    
+        }    
+        form{    
+            text-align: center;    
+            font-family: Calibri;    
+            font-size: 20px;    
+            border: 3px solid black;    
+            width: 600px;    
+            margin: 20px auto;    
+        }    
+        td {    
+            padding: 10px;    
+        }    
+        td:first-child {    
+            text-align: right;    
+            font-weight: bold;    
+        }    
+        td:last-child {    
+            text-align: left;    
+        }
+    
+    </style>    
+    <script>    
+        function validate() {    
+            var fname = document.reg_form.fname;    
+            var lname = document.reg_form.lname;    
+            var address = document.reg_form.address;    
+            var passid = document.reg_form.fpass;
+            var email = document.reg_form.email;    
+            var mobile = document.reg_form.mobile;    
+                
+    
+            if (fname.value.length < 6) {    
+                alert("Name is should contain alphabets and the length should not be less than 6 character ");    
+                fname.focus();    
+                return false;    
+            }    
+            if (lname.value.length <= 0) {    
+                alert("Last Name is required");    
+                lname.focus();    
+                return false;    
+            }   
+            if (passid_len == 0 ||passid_len >= my || passid_len < mx)
+            {
+                alert("Password should not be empty / length be between "+mx+" to "+my);
+                passid.focus();
+                return false;
+            }
+
+            if (address.value.length <= 0) {    
+                alert("Address is required");    
+                address.focus();    
+                return false;    
+            }    
+              
+            if (email.value.length <= 0) {    
+                alert("Email Id is required");    
+                email.focus();    
+                return false;    
+            }    
+            if (mobile.value.length = 10) {    
+                alert("Mobile number is required");    
+                mobile.focus();    
+                return false;    
+            }    
+             
+            return false;    
+        }    
+    </script>       
+</head>
+ 
+    <hr>    
+    <form method="" action="" name="reg_form" onsubmit="return validate()">    
+        <h2>Registration Form</h2>    
+        <table>    
+            <tr>    
+                <td><label>First Name: </label></td>    
+                <td>    
+                    <input type="text" name="fname" placeholder="First Name">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Last Name: </label></td>    
+                <td>    
+                    <input type="text" name="lname" placeholder="Last Name">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Password: </label></td>    
+                <td>    
+                    <input type="text" name="fpass" placeholder="Password">    
+                </td>    
+            </tr> 
+            <tr>    
+                <td><label>Address: </label></td>    
+                <td>    
+                    <input type="textarea" size="50" name="address" placeholder="Address">    
+                </td>    
+            </tr>    
+             
+            <tr>    
+                <td><label>Email Id: </label></td>    
+                <td>    
+                    <input type="text" name="email" placeholder="example@gmail.com">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Mobile: </label></td>    
+                <td>    
+                    <input type="number" name="mobile">    
+                </td>    
+            </tr>    
+               
+            <tr>    
+                <td>    
+                    <input type="submit" name="submit" value="Submit">    
+                      
+                </td>    
+            </tr>             
+        </table>    
+    </form>    
+</body>    
+</html>
